@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+    <title>Microservices on frontend</title>
+    <style>
+        .container-if {
+            height: 0;
+            overflow: hidden;
+            padding-bottom: 156.25%;
+            /* aspect ratio */
+            position: relative;
+        }
+
+        iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="title">Microservices examle</h1>
+    <div class="columns">
+        <section class="column">
+            <div class="container-if">
+                <iframe src="http://localhost:4000" frameborder="0"></iframe>
+            </div>
+
+        </section>
+        <section class="column">
+            <div class="container-if">
+                <iframe src="http://localhost:4001" frameborder="0"></iframe>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>

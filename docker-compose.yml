@@ -1,0 +1,34 @@
+version: '3.5'
+
+services:
+
+  react-microservice:
+    container_name: react-microservice
+    build:
+      context: react-microservice/.
+      dockerfile: Dockerfile
+    ports:
+      - '4000:80'
+    environment:
+      - NODE_ENV=development
+
+  angular-microservice:
+    container_name: angular-microservice
+    build:
+      context: angular-microservice/.
+      dockerfile: Dockerfile
+    ports:
+      - '4001:80'
+    environment:
+      - NODE_ENV=development
+
+  microservices:
+    container_name: microservices
+    depends_on:
+      - "react-microservice"
+      - "angular-microservice"
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - '5000:80'
